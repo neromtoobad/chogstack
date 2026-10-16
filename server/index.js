@@ -23,7 +23,7 @@ const chogs = assets.chogs;
 const tower = new Tower(DATA_DIR, chogs);
 
 const app = express();
-app.use(compression());
+app.use(compression({ filter: (req, res) => req.path !== '/api/events' && compression.filter(req, res) }));
 app.use(express.json({ limit: '16kb' }));
 
 // ---------- sessions ----------
