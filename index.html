@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <title>Chog Stack</title>
+  <meta name="description" content="One shared tower. 1,969 Chogs. Each Chog's traits forge its block. Drop yours daily, top it when it falls." />
+  <meta property="og:title" content="Chog Stack" />
+  <meta property="og:description" content="One shared tower built from 1,969 Chogs. Don't be the one who knocks it down." />
+  <meta property="og:image" content="/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Gaegu:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/web/style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <header class="top">
+    <div class="brand">
+      <span class="logo">CHOG<b>STACK</b></span>
+      <span class="season" id="seasonTag">SEASON 1</span>
+    </div>
+    <nav class="modes" id="modes">
+      <button data-mode="live" class="on">Live tower</button>
+      <button data-mode="arcade">Arcade</button>
+      <button data-mode="sandbox">Practice</button>
+    </nav>
+    <div class="right">
+      <button class="ghost" id="howBtn" aria-label="How it works">?</button>
+      <button class="ghost boardBtn" id="boardBtn" aria-label="Summit, feed and records">🏆</button>
+      <button class="btn pink" id="walletBtn">Connect</button>
+    </div>
+  </header>
+
+  <div class="meter" id="meter">
+    <div class="m-val"><span id="hVal">0.0</span><small>m</small></div>
+    <div class="m-sub" id="hSub">tower height</div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <div class="callout" id="callout"></div>
+
+  <aside class="side" id="side">
+    <div class="tabs" id="tabs">
+      <button data-tab="summit" class="on">Summit</button>
+      <button data-tab="feed">Feed</button>
+      <button data-tab="boards">Records</button>
+      <button data-tab="seasons">Seasons</button>
+    </div>
+    <div class="pane" id="pane"></div>
+  </aside>
+
+  <section class="dock" id="dock">
+    <div class="dock-main">
+      <div class="tray" id="tray"></div>
+      <div class="controls" id="controls">
+        <button class="round" id="rotL" aria-label="Rotate left">⟲</button>
+        <button class="btn big" id="dropBtn">DROP</button>
+        <button class="round" id="rotR" aria-label="Rotate right">⟳</button>
+      </div>
+    </div>
+    <div class="sabo" id="sabo">
+      <span class="sabo-l">Burn $CHOG to mess with it</span>
+      <button class="chip" data-kind="gust">🌬️ Gust <b id="pGust">500</b></button>
+      <button class="chip" data-kind="quake">💥 Quake <b id="pQuake">1500</b></button>
+    </div>
+  </section>
+
+  <div class="modal" id="modal" hidden>
+    <div class="sheet" id="sheet"></div>
+  </div>
+
+  <script type="module" src="/web/main.js"></script>
+</body>
+</html>

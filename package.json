@@ -1,0 +1,23 @@
+{
+  "name": "chogstack",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "compression": "^1.8.2",
+    "express": "^5.3.0",
+    "matter-js": "^0.20.0",
+    "viem": "^2.57.7",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
+  }
+}
